@@ -1,54 +1,61 @@
-html, body{
+html, body {
   margin: 0;
   padding: 0;
   font-family: Roboto, sans-serif;
   box-sizing: border-box;
   font-size: 16px;
 }
-.container{
-  max-width: 10600px;
+.container {
+  max-width: 1600px;
   width: 100%;
   margin: 0 auto;
   flex-wrap: wrap;
+  padding-bottom: 25px;
 }
 
-section {
+.content {
   background: url(../img/bg-mob.png) no-repeat;
+  background-size:cover;
+  background-position: center, center;
   text-align: center;
 
   .container {
-    .mob-v__logo {
+
+    header {
       width: 100%;
       text-align: center;
+      padding-top: 20px;
 
       img {
         width: 210px;
-        height: 25px;
+        height: auto;
         margin: 0 auto;
-        padding-top: 25px;
       }
     }
 
-    .mob-v__description-content {
+    .description {
       color: #fff;
       text-transform: uppercase;
 
-      .mob-v_title {
-        padding-top: 30px;
-        font-size: 32px;
-        line-height: 1.22;
-        font-weight: 900;
+      .description__title {
+
+        h1 {
+          padding-top: 30px;
+          font-size: 32px;
+          line-height: 1.22;
+          font-weight: 900;
+        }
       }
 
-      .mob-v__description {
+      .description__tex {
         padding-top: 20px;
         line-height: 1.22;
         font-size: 23px;
       }
     }
 
-    .mob-v__car-img {
-      margin-top: 65px;
+    .car {
+      margin-top: 45px;
 
       img {
         max-width: 415px;
@@ -56,15 +63,12 @@ section {
       }
     }
 
-    .mob-v__footer {
-      .mob-v__btn {
-        a {
-          text-decoration: none;
+    .footer {
 
-        }
+      .footer__btn {
         max-width: 245px;
         width: 100%;
-        height: 45px;
+        min-height: 45px;
         font-size: 27px;
         color: #140474;
         font-weight: 800;
@@ -72,14 +76,29 @@ section {
         letter-spacing: 1.5px;
         margin: 0 auto;
         padding: 23px;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
 
+        a {
+          text-decoration: none;
+
+          &:visited {
+            color: darkblue;
+          }
+          &:hover{
+            color: #1d09fb;
+          }
+        }
       }
 
-      main {
+      .footer__details {
         width: 100%;
         background-size: cover;
         transition: all .2s ease;
-        .button {
+
+        .footer__sharesbtn{
           margin-top: 20px;
           padding-bottom: 125px;
           margin-left: auto;
@@ -92,63 +111,62 @@ section {
           }
         }
       }
-      .overlay {
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        top: 0;
-        left: 0;
-        display: none;
-
-        .popup {
-          position: absolute;
-          width: 100%;
-          height: 100vh;
-          left: 50%;
-          top: 50%;
-          transform: translate(-50%, -50%);
-          padding: 40px;
-          border-radius: 5px;
-          box-sizing: border-box;
-          background-color: #11117f;
-          color: pink;
-        }
-
-        .close-popup {
-          position: absolute;
-          top: 10px;
-          right: 10px;
-          width: 23px;
-          height: 23px;
-          cursor: pointer;
-
-          &:before {
-            content: '';
-            background-color: #fff;
-            position: absolute;
-            height: 1px;
-            width: 20px;
-            top: 11px;
-            left: -4px;
-            transform: rotate(-45deg);
-          }
-
-          &:after {
-            content: '';
-            background-color: #fff;
-            position: absolute;
-            height: 1px;
-            width: 20px;
-            top: 11px;
-            transform: rotate(45deg);
-            left: -4px;
-          }
-        }
-      }
     }
   }
 }
+  .overlay {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: none;
 
+    .popup {
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      padding: 40px;
+      border-radius: 5px;
+      box-sizing: border-box;
+      background-color: #11117f;
+      color: pink;
+    }
+
+    .close-popup {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 23px;
+      height: 23px;
+      cursor: pointer;
+
+      &:before {
+        content: '';
+        background-color: #fff;
+        position: absolute;
+        height: 1px;
+        width: 20px;
+        top: 11px;
+        left: -4px;
+        transform: rotate(-45deg);
+      }
+
+      &:after {
+        content: '';
+        background-color: #fff;
+        position: absolute;
+        height: 1px;
+        width: 20px;
+        top: 11px;
+        transform: rotate(45deg);
+        left: -4px;
+      }
+    }
+  }
 
 
 

@@ -1,10 +1,10 @@
 {
-  "name": "app",
+  "name": "favorit",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "favorit"
+    "build": "gulp"
   },
   "author": "Dmytro Sakharchuk",
   "license": "ISC",
